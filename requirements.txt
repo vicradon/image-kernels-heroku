@@ -1,6 +1,6 @@
-streamlit
+python==3.10.4
 opencv-python==4.6.0.66
 matplotlib==3.5.2
 numpy==1.22.3
-base64
 sympy==1.10.1
+streamlit
