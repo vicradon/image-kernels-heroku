@@ -98,11 +98,11 @@ if upload_img:
         elif select == 'Sharpen Image':
             Sharpen_Kernel = np.array([[-1, -1, -1], [-1, 9, -1], [-1, -1, -1]])
             Sharpen_Effect_Img = cv2.filter2D(src=img, kernel=Sharpen_Kernel, ddepth=-1)
-            st.image(Sharpen_Effect_Img, use_column_width = True)
+            st.image(Sharpen_Effect_Img, use_column_width = True,clamp=True)
         elif select == 'Emboss image':
             Emboss_Kernel = np.array([[0,-1,-1],[1,0,-1],[1,1,0]])
             Emboss_Effect_Img = cv2.filter2D(src=img, kernel=Emboss_Kernel, ddepth=-1)
-            st.image(Emboss_Effect_Img, use_column_width = True)
+            st.image(Emboss_Effect_Img, use_column_width = True,clamp=True)
         elif select == 'Apply your own filter':
             try:    
                 custom_kernel = input_array
