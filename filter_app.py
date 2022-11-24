@@ -57,7 +57,7 @@ if upload_img:
     
     with col1:
         select = st.selectbox(label='Select filter: ', 
-                          options=['Default','blur image','Gray Scale','Sharpen Image','Emboss image','Apply your own filter'])
+                          options=['Default','blur image','Gray Scale','Sharpen Image','Sepia','Apply your own filter'])
         
         if select == 'blur image':
             filter_ = np.around([[1/9,1/9,1/9],[1/9,1/9,1/9],[1/9,1/9,1/9]], 4)
