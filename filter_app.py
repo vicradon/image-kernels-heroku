@@ -70,8 +70,8 @@ if upload_img:
             filter_ = np.around([[-1, -1, -1], [-1, 9, -1], [-1, -1, -1]], 4)
             M = Matrix(filter_)
             st.write("The applied Image kernel:",M*Identity(3).as_explicit())
-        if select == 'Emboss image':
-            filter_ = np.around([[0,-1,-1],[1,0,-1],[1,1,0]], 4)
+        if select == 'Sepia':
+            filter_ = np.around([[0.272, 0.534, 0.131],[0.349, 0.686, 0.168],[0.393, 0.769, 0.189]], 4)
             M = Matrix(filter_)
             st.write("The applied Image kernel:",M*Identity(3).as_explicit())
         
@@ -99,10 +99,10 @@ if upload_img:
             Sharpen_Kernel = np.array([[-1, -1, -1], [-1, 9, -1], [-1, -1, -1]])
             Sharpen_Effect_Img = cv2.filter2D(src=img, kernel=Sharpen_Kernel, ddepth=-1)
             st.image(Sharpen_Effect_Img, use_column_width = True,clamp=True)
-        elif select == 'Emboss image':
-            Emboss_Kernel = np.array([[0,-1,-1],[1,0,-1],[1,1,0]])
-            Emboss_Effect_Img = cv2.filter2D(src=img, kernel=Emboss_Kernel, ddepth=-1)
-            st.image(Emboss_Effect_Img, use_column_width = True,clamp=True)
+        elif select == 'Sepia':
+            sepia_Kernel = np.array([[0.272, 0.534, 0.131],[0.349, 0.686, 0.168],[0.393, 0.769, 0.189]])
+            sepia_Effect_Img = cv2.filter2D(src=img, kernel=sepia_Kernel, ddepth=-1)
+            st.image(sepia_Effect_Img, use_column_width = True,clamp=True)
         elif select == 'Apply your own filter':
             try:    
                 custom_kernel = input_array
