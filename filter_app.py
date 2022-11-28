@@ -45,7 +45,7 @@ div[data-testid="stHeader"] {
 """
 , unsafe_allow_html=True)
     
-st.markdown("<h1 style='text-align: center;'>Image Kernels :</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Image Kernels</h1>", unsafe_allow_html=True)
 st.markdown("***")
 
 col1, col2, col3 = st.columns([0.5,1,1])
