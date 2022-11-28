@@ -51,7 +51,7 @@ st.markdown("***")
 col1, col2, col3 = st.columns([0.5,1,1])
 
 with col1:
-    upload_img = st.file_uploader(label='Upload image : ', type=["png", "jpg", "jpeg"])
+    upload_img = st.file_uploader(label='Upload image : ', type=["png", "jpg", "jpeg", "jpe", "jif", "jfif", "pjpeg", "pjp", "gif", "svg", "webp", "avif", "apng", "bmp", "ico", "cur", "tif", "tiff"])
 
 if upload_img:
     
