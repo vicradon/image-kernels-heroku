@@ -21,14 +21,14 @@ def add_bg_from_local(image_file):
     <style>
     .stApp {{
         background-image: url(data:image/{"jpg"};base64,{encoded_string.decode()});
-        background-size: cover
+        background-size: cover;
     }}
     </style>
     """,
     unsafe_allow_html=True
     )
    
-add_bg_from_local('preferred_img.jpg') 
+add_bg_from_local('bg.jpg') 
 
 st.markdown("""
 <style>
@@ -45,13 +45,13 @@ div[data-testid="stHeader"] {
 """
 , unsafe_allow_html=True)
     
-st.markdown("<h1 style='text-align: center;'>Image Kernels :</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Image Kernels</h1>", unsafe_allow_html=True)
 st.markdown("***")
 
 col1, col2, col3 = st.columns([0.5,1,1])
 
 with col1:
-    upload_img = st.file_uploader(label='Upload image : ')
+    upload_img = st.file_uploader(label='Upload image : ', type=["png", "jpg", "jpeg", "jpe", "jif", "jfif", "pjpeg", "pjp", "gif", "svg", "webp", "avif", "apng", "bmp", "ico", "cur", "tif", "tiff"])
 
 if upload_img:
     
